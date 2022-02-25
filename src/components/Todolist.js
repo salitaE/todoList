@@ -1,0 +1,25 @@
+import React from 'react';
+
+export default function Todolist(props) {
+  return(
+      <div>
+        <table>
+            <thead className="tHead"> 
+                <tr><th>Date</th></tr>
+                <tr><th>Description</th></tr>
+            </thead>
+
+          <tbody className="tBody">
+          {
+            props.todos.map((todo, index) => 
+             <tr key={index}>
+                <td>{todo.date} </td>
+                <td>{todo.desc}</td>
+             </tr>
+           )
+          }
+            </tbody>
+         </table>
+      </div>
+    )
+}
